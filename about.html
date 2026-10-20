@@ -1,0 +1,184 @@
+
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  
+<link rel="stylesheet" href="style.css">
+
+
+    <title>الرئيسية - السلسبيل</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Tahoma, Arial, sans-serif;
+            background: #f0f7f3;
+            color: #333;
+        }
+
+        header {
+            background: #176b4d;
+            color: white;
+            text-align: center;
+            padding: 35px 15px;
+        }
+
+        header h1 {
+            font-size: 38px;
+            margin: 0 0 12px;
+        }
+
+        nav {
+            background: #10543e;
+            padding: 17px 10px;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 22px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-size: 16px;
+        }
+
+        nav a:hover {
+            color: #c5efd5;
+        }
+
+        .hero {
+            text-align: center;
+            padding: 55px 20px;
+        }
+
+        .hero h2 {
+            color: #176b4d;
+            font-size: 30px;
+        }
+
+        .hero p {
+            max-width: 650px;
+            margin: 20px auto;
+            line-height: 2;
+            font-size: 18px;
+        }
+
+        .button {
+            display: inline-block;
+            background: #176b4d;
+            color: white;
+            text-decoration: none;
+            padding: 14px 25px;
+            border-radius: 8px;
+            margin: 10px;
+        }
+
+        .button:hover {
+            background: #10543e;
+        }
+
+        .features {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .card {
+            background: white;
+            width: 280px;
+            padding: 25px;
+            border-radius: 14px;
+            text-align: center;
+            box-shadow: 0 5px 15px #00000010;
+        }
+
+        .card h3 {
+            color: #176b4d;
+        }
+
+        .card p {
+            line-height: 1.8;
+        }
+
+        footer {
+            background: #10543e;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 35px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>السلسبيل</h1>
+        <p>رفيقك في رحلة حفظ القرآن الكريم</p>
+    </header>
+
+    <nav>
+        <a href="about.html">الرئيسية</a>
+        <a href="program.html">حلقات التحفيظ</a>
+        <a href="register.html">التسجيل في الحلقات</a>
+        <a href="contact.html">اتصل بنا</a>
+        <a href="logout.html">تسجيل الخروج</a>
+    </nav>
+<img src="images/quran.png"
+     alt="القرآن الكريم"
+     class="hero-image">
+    <section class="hero">
+        <h2>أهلًا بك في منصة السلسبيل</h2>
+
+        <p>
+            نسعى إلى تسهيل حفظ القرآن الكريم وتعلم تلاوته
+            من خلال حلقات تعليمية تناسب مختلف المستويات.
+            ابدأ رحلتك اليوم واجعل القرآن نورًا لحياتك.
+        </p>
+
+        <a href="program.html" class="button">
+            استعرض حلقات التحفيظ
+        </a>
+
+        <a href="register.html" class="button">
+            سجّل في حلقة
+        </a>
+    </section>
+
+    <section class="features">
+
+        <div class="card">
+            <h3>📖 حلقات التحفيظ</h3>
+            <p>تعرّف على حلقات حفظ القرآن الكريم والمراجعة.</p>
+            <a href="program.html" class="button">عرض الحلقات</a>
+        </div>
+
+        <div class="card">
+            <h3>📝 التسجيل</h3>
+            <p>اختر الحلقة المناسبة وسجّل بياناتك.</p>
+            <a href="register.html" class="button">التسجيل الآن</a>
+        </div>
+
+        <div class="card">
+            <h3>☎️ التواصل معنا</h3>
+            <p>تواصل معنا لمعرفة المزيد عن المنصة.</p>
+            <a href="contact.html" class="button">اتصل بنا</a>
+        </div>
+
+    </section>
+
+    <footer>
+        <p>© 2026 السلسبيل لتحفيظ القرآن الكريم</p>
+    </footer>
+
+</body>
+</html>

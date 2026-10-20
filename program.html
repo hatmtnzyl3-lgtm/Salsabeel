@@ -1,0 +1,166 @@
+
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  
+<link rel="stylesheet" href="style.css">
+
+    <title>حلقات التحفيظ - السلسبيل</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Tahoma, Arial, sans-serif;
+            background: #f0f7f3;
+            color: #333;
+            text-align: center;
+        }
+
+        header {
+            background: #176b4d;
+            color: white;
+            padding: 25px 15px;
+        }
+
+        nav {
+            background: #10543e;
+            padding: 17px 10px;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+        }
+
+        .container {
+            max-width: 850px;
+            margin: 30px auto;
+            padding: 20px;
+        }
+
+        .container > h2 {
+            color: #176b4d;
+            font-size: 28px;
+        }
+
+        .intro {
+            line-height: 1.9;
+        }
+
+        .halaqa {
+            background: white;
+            margin: 22px 0;
+            padding: 25px;
+            border-radius: 14px;
+            box-shadow: 0 5px 15px #00000010;
+        }
+
+        .halaqa h3 {
+            color: #176b4d;
+        }
+
+        .halaqa p {
+            line-height: 1.8;
+        }
+
+        .button {
+            display: inline-block;
+            background: #176b4d;
+            color: white;
+            text-decoration: none;
+            padding: 12px 22px;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        .button:hover {
+            background: #10543e;
+        }
+
+        footer {
+            background: #10543e;
+            color: white;
+            padding: 18px;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>السلسبيل</h1>
+        <p>حلقات تحفيظ القرآن الكريم</p>
+    </header>
+
+    <nav>
+        <a href="about.html">الرئيسية</a>
+        <a href="program.html">حلقات التحفيظ</a>
+        <a href="register.html">التسجيل في الحلقات</a>
+        <a href="contact.html">اتصل بنا</a>
+        <a href="logout.html">تسجيل الخروج</a>
+    </nav>
+
+<img src="images/islamic_images_collage.png"
+     alt="حلقات تحفيظ القرآن الكريم"
+     class="hero-image">
+
+    <main class="container">
+
+        <h2>اختر حلقة التحفيظ المناسبة</h2>
+
+        <p class="intro">
+            تعرّف على حلقاتنا واختر المستوى المناسب لرحلتك
+            في حفظ القرآن الكريم.
+        </p>
+
+        <div class="halaqa">
+            <h3>حلقة الأطفال</h3>
+            <p>حفظ قصار السور وتعليم القراءة الصحيحة للقرآن الكريم.</p>
+            <p><strong>المستوى:</strong> مبتدئ</p>
+            <a class="button"
+               href="register.html?halaqa=children">
+               التسجيل في الحلقة
+            </a>
+        </div>
+
+        <div class="halaqa">
+            <h3>حلقة المبتدئين</h3>
+            <p>تعلم أساسيات التلاوة وحفظ السور بالتدريج.</p>
+            <p><strong>المستوى:</strong> مبتدئ</p>
+            <a class="button"
+               href="register.html?halaqa=beginners">
+               التسجيل في الحلقة
+            </a>
+        </div>
+
+        <div class="halaqa">
+            <h3>حلقة الحفظ والمراجعة</h3>
+            <p>مراجعة المحفوظ وتنظيم خطة لاستمرار الحفظ.</p>
+            <p><strong>المستوى:</strong> متقدم</p>
+            <a class="button"
+               href="register.html?halaqa=revision">
+               التسجيل في الحلقة
+            </a>
+        </div>
+
+    </main>
+
+    <footer>
+        <p>© 2026 السلسبيل لتحفيظ القرآن الكريم</p>
+    </footer>
+
+</body>
+</html>

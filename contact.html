@@ -1,0 +1,196 @@
+
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  
+<link rel="stylesheet" href="style.css">
+
+
+    <title>اتصل بنا - السلسبيل</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Tahoma, Arial, sans-serif;
+            background: #f0f7f3;
+            color: #333;
+        }
+
+        header {
+            background: #176b4d;
+            color: white;
+            text-align: center;
+            padding: 28px 15px;
+        }
+
+        nav {
+            background: #10543e;
+            padding: 17px 10px;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+        }
+
+        nav a:hover {
+            color: #c5efd5;
+        }
+
+        .container {
+            max-width: 650px;
+            margin: 35px auto;
+            padding: 25px;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 5px 18px #00000010;
+        }
+
+        h2 {
+            color: #176b4d;
+            text-align: center;
+        }
+
+        .intro {
+            text-align: center;
+            line-height: 1.9;
+        }
+
+        label {
+            display: block;
+            margin: 15px 0 8px;
+            font-weight: bold;
+        }
+
+        input, textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            font-size: 16px;
+            font-family: inherit;
+        }
+
+        button {
+            width: 100%;
+            padding: 13px;
+            margin-top: 20px;
+            background: #176b4d;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 17px;
+            cursor: pointer;
+        }
+
+        #message {
+            color: #176b4d;
+            text-align: center;
+            line-height: 1.8;
+        }
+
+        footer {
+            background: #10543e;
+            color: white;
+            text-align: center;
+            padding: 18px;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>السلسبيل</h1>
+        <p>نسعد بتواصلك معنا</p>
+    </header>
+
+    <nav>
+        <a href="about.html">الرئيسية</a>
+        <a href="program.html">حلقات التحفيظ</a>
+        <a href="register.html">التسجيل في الحلقات</a>
+        <a href="contact.html">اتصل بنا</a>
+    </nav>
+
+    <main class="container">
+
+        <h2>تواصل معنا</h2>
+
+        <p class="intro">
+            إذا كانت لديك استفسارات أو مقترحات حول حلقات
+            تحفيظ القرآن الكريم، يسعدنا استقبال رسالتك.
+        </p>
+
+        <form id="contactForm">
+
+            <label for="name">الاسم</label>
+            <input
+                type="text"
+                id="name"
+                placeholder="أدخلي اسمك"
+                required
+            >
+
+            <label for="email">البريد الإلكتروني</label>
+            <input
+                type="email"
+                id="email"
+                placeholder="example@email.com"
+                required
+            >
+
+            <label for="subject">موضوع الرسالة</label>
+            <input
+                type="text"
+                id="subject"
+                placeholder="موضوع الرسالة"
+                required
+            >
+
+            <label for="messageText">الرسالة</label>
+            <textarea
+                id="messageText"
+                rows="5"
+                placeholder="اكتبي رسالتك هنا"
+                required
+            ></textarea>
+
+            <button type="submit">إرسال الرسالة</button>
+
+            <p id="message"></p>
+
+        </form>
+
+    </main>
+
+    <footer>
+        <p>© 2026 السلسبيل لتحفيظ القرآن الكريم</p>
+    </footer>
+
+    <script>
+        document.getElementById("contactForm")
+            .addEventListener("submit", function(event) {
+
+                event.preventDefault();
+
+                document.getElementById("message").textContent =
+                    "تم التحقق من رسالتك بنجاح. " +
+                    "هذه نسخة تجريبية؛ لم تُرسل الرسالة فعليًا.";
+
+                this.reset();
+            });
+    </script>
+
+</body>
+</html>

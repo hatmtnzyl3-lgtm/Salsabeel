@@ -1,0 +1,224 @@
+
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  
+<link rel="stylesheet" href="style.css">
+
+
+    <title>التسجيل في الحلقات - السلسبيل</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Tahoma, Arial, sans-serif;
+            background: #e8f3ed;
+            color: #333;
+        }
+
+        header {
+            background: #176b4d;
+            color: white;
+            text-align: center;
+            padding: 25px;
+        }
+
+        nav {
+            background: #10543e;
+            padding: 17px 10px;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 18px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+        }
+
+        .container {
+            background: white;
+            width: 90%;
+            max-width: 500px;
+            margin: 30px auto;
+            padding: 25px;
+            border-radius: 15px;
+            box-shadow: 0 5px 18px #00000012;
+        }
+
+        h2 {
+            color: #176b4d;
+            text-align: center;
+        }
+
+        label {
+            display: block;
+            margin: 15px 0 8px;
+            font-weight: bold;
+        }
+
+        input, select, textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 7px;
+            font-size: 16px;
+            font-family: inherit;
+        }
+
+        button {
+            width: 100%;
+            margin-top: 22px;
+            padding: 13px;
+            border: none;
+            border-radius: 8px;
+            background: #176b4d;
+            color: white;
+            font-size: 17px;
+            cursor: pointer;
+        }
+
+        #message {
+            text-align: center;
+            line-height: 1.8;
+            color: #176b4d;
+        }
+
+        footer {
+            background: #10543e;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>السلسبيل</h1>
+        <p>التسجيل في حلقات تحفيظ القرآن الكريم</p>
+    </header>
+
+    <nav>
+        <a href="about.html">الرئيسية</a>
+        <a href="program.html">حلقات التحفيظ</a>
+        <a href="register.html">التسجيل</a>
+        <a href="contact.html">اتصل بنا</a>
+    </nav>
+
+    <main class="container">
+
+        <h2>استمارة التسجيل</h2>
+
+        <form id="registerForm">
+
+            <label for="fullname">الاسم الكامل</label>
+            <input
+                type="text"
+                id="fullname"
+                placeholder="اكتبي الاسم الكامل"
+                required
+            >
+
+            <label for="phone">رقم الهاتف</label>
+            <input
+                type="tel"
+                id="phone"
+                placeholder="أدخلي رقم الهاتف"
+                required
+            >
+
+            <label for="age">العمر</label>
+            <input
+                type="number"
+                id="age"
+                min="4"
+                max="100"
+                placeholder="أدخلي العمر"
+                required
+            >
+
+            <label for="halaqa">اختاري الحلقة</label>
+            <select id="halaqa" required>
+                <option value="">-- اختاري الحلقة --</option>
+                <option value="children">حلقة الأطفال</option>
+                <option value="beginners">حلقة المبتدئين</option>
+                <option value="revision">حلقة الحفظ والمراجعة</option>
+            </select>
+
+            <label for="notes">ملاحظات (اختياري)</label>
+            <textarea
+                id="notes"
+                rows="3"
+                placeholder="اكتبي أي ملاحظات"
+            ></textarea>
+
+            <button type="submit">تأكيد التسجيل</button>
+
+            <p id="message"></p>
+
+        </form>
+
+    </main>
+
+    <footer>
+        <p>© 2026 السلسبيل لتحفيظ القرآن الكريم</p>
+    </footer>
+
+    <script>
+        const params = new URLSearchParams(window.location.search);
+        const selected = params.get("halaqa");
+
+        const halaqaSelect = document.getElementById("halaqa");
+
+        if (selected) {
+            halaqaSelect.value = selected;
+        }
+
+        document.getElementById("registerForm")
+            .addEventListener("submit", function(event) {
+
+                event.preventDefault();
+
+                const fullname =
+                    document.getElementById("fullname").value.trim();
+
+                const phone =
+                    document.getElementById("phone").value.trim();
+
+                const age =
+                    Number(document.getElementById("age").value);
+
+                const halaqa =
+                    halaqaSelect.options[halaqaSelect.selectedIndex].text;
+
+                if (!fullname || !phone || !halaqaSelect.value) {
+                    document.getElementById("message").textContent =
+                        "يرجى إكمال البيانات المطلوبة.";
+                    return;
+                }
+
+                if (age < 4 || age > 100) {
+                    document.getElementById("message").textContent =
+                        "يرجى إدخال عمر صحيح بين 4 و100.";
+                    return;
+                }
+
+                document.getElementById("message").textContent =
+                    "تم التحقق من البيانات يا " + fullname +
+                    ". الحلقة المختارة: " + halaqa +
+                    ". هذه تجربة فقط، ولم تُحفظ البيانات في قاعدة بيانات.";
+            });
+    </script>
+
+</body>
+</html>
